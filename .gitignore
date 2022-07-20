@@ -1,0 +1,12 @@
+node_modules/
+public/
+.nova/
+.vscode/
+**/.DS_Store
+*.xd
+*.sketch
+*.fig
+prepros.config
+package-lock.json
+package.json
+.prettierrc

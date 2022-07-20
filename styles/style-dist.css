@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+body {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	height: 100vh;
+	margin: 0;
+	overflow: hidden;
+	background-color: #e1e1e1;
+	font-family: 'Muli', sans-serif;
+	text-align: center;
+}
+
+p {
+	margin-block: 0;
+}
+
+.key {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	position: relative;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	min-width: 6ch;
+	padding: 20px;
+	border: 1px solid #999;
+	background-color: #eee;
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+	        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+	font-weight: bold;
+	font-size: clamp(1.25rem, 0.5rem + 3vw, 4rem);
+}
+
+.key small {
+	position: absolute;
+	top: -24px;
+	left: 0;
+	width: 100%;
+	color: #555;
+	font-size: 14px;
+	text-align: center;
+}
+
+.depreciated {
+	position: relative;
+	-webkit-text-decoration: line-through rgba(255 0 0 /0.3) 20%;
+	        text-decoration: line-through rgba(255 0 0 /0.3) 20%;
+}
+.depreciated::after {
+	display: none;
+	position: absolute;
+	content: 'depreciated';
+}
+.depreciated:hover::after {
+	display: unset;
+	top: -1.5rem;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	color: red;
+	text-transform: uppercase;
+}
+
+#mobile-keyb-trigger {
+	margin-top: 1em;
+	font-size: clamp(1.25rem, 0.5rem + 3vw, 4rem);
+}
+
+@media screen and (min-width: 1440px) and (orientation: landscape) {
+	#mobile-keyb-trigger {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.key {
+		margin: 10px 0px;
+	}
+}
